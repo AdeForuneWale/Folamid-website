@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Folamid Catering and Event Planning Limited</title>
+    <meta name="description"
+        content="Learn about Folamid Catering and Event Planning Limited - Nigeria's premier culinary service provider and vocational training institution with over 10 years of excellence.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/folamid logo.png">
+    <link rel="shortcut icon" type="image/png" href="images/folamid logo.png">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6.4 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-orange: #FF8C42;
+            --folamid-green: #4CAF50;
+            --dark-green: #2E7D32;
+            --cream-white: #FFF8F3;
+            --dark-brown: #3E2723;
+            --light-orange: #FFE0D1;
+            --naija-gold: #FFD700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--cream-white);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--dark-green) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-orange) !important;
+            transform: translateY(-2px);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-section {
+            background: var(--light-orange);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb {
+            background: none;
+            margin-bottom: 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--dark-green);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Section Styling */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--naija-gold);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--primary-orange);
+            border: 3px solid var(--folamid-green);
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 30px;
+            background: white;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--light-orange);
+        }
+
+        .timeline-content h3 {
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+
+        .timeline-year {
+            color: var(--primary-orange);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Team Cards */
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .team-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-image {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .team-info {
+            padding: 2rem;
+        }
+
+        .team-name {
+            color: var(--dark-green);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-position {
+            color: var(--primary-orange);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Stats Counter */
+        .stats-section {
+            background: linear-gradient(135deg, var(--folamid-green), var(--dark-green));
+            color: white;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            color: var(--naija-gold);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Mission Vision Values */
+        .mvv-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height: 100%;
+            border-top: 5px solid var(--primary-orange);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .mvv-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mvv-icon {
+            font-size: 3rem;
+            color: var(--folamid-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .mvv-title {
+            color: var(--dark-green);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Expertise Cards */
+        .expertise-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .expertise-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .expertise-card:hover {
+            border-color: var(--folamid-green);
+            transform: translateY(-5px);
+        }
+
+        .expertise-icon {
+            font-size: 2.5rem;
+            color: var(--primary-orange);
+            margin-bottom: 1.5rem;
+        }
+
+        .expertise-title {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Program Cards */
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-orange);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .program-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-duration {
+            background: var(--folamid-green);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .program-title {
+            color: var(--dark-green);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .program-specialties {
+            color: var(--primary-orange);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .program-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-orange), var(--folamid-green));
+            color: white;
+            text-align: center;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--dark-green);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: var(--cream-white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            color: var(--dark-green);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-brown);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer h5 {
+            color: var(--naija-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-orange);
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: var(--primary-orange);
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--folamid-green);
+            transform: translateY(-3px);
+        }
+
+        /* Nigerian Cultural Elements */
+        .naija-pattern {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="2" fill="%23FFD700" opacity="0.1"/></svg>');
+        }
+
+        .flag-colors {
+            background: linear-gradient(45deg, var(--folamid-green) 33%, white 33%, white 66%, var(--folamid-green) 66%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .timeline::after {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 20px;
+            }
+
+            .timeline-item::after {
+                left: 10px !important;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .navbar-brand img {
+                height: 40px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/folamid logo.png" alt="Folamid Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="folamid_vocational_school.html">Vocational School</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section" style="margin-top: 76px;">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Our Nigerian Culinary Story</h1>
+                <p class="fade-in">From Lagos to the World - Celebrating Nigerian flavors while embracing international
+                    excellence in culinary education and event management</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company History Timeline -->
+    <section class="section-padding bg-light naija-pattern">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Journey Through Nigeria</h2>
+                <p>A decade of celebrating Nigerian hospitality and building culinary excellence internationally</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2014</span>
+                        <h3>Born in Lagos</h3>
+                        <p>Started with a passion for Nigerian cuisine in the heart of Lagos. Our first jollof rice
+                            catering service quickly became the talk of Victoria Island, serving authentic Nigerian
+                            flavors to local celebrations.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2017</span>
+                        <h3>Full Nigerian Event Experience</h3>
+                        <p>Expanded to offer complete traditional and contemporary Nigerian event management - from
+                            naming ceremonies to elaborate Nigerian weddings, bringing cultural authenticity to every
+                            celebration.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h3>Nigerian Culinary School Launch</h3>
+                        <p>Established our vocational training school focusing on Nigerian specialties alongside
+                            international techniques, addressing the skills gap in Nigeria's growing hospitality
+                            industry.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3>West African Excellence Hub</h3>
+                        <p>Now serving 500+ Nigerian events annually and training 1000+ students internationally,
+                            proudly representing Nigerian hospitality standards worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Values -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Nigerian Foundation</h2>
+                <p>Built on Nigerian values of community, excellence, and cultural pride</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="mvv-card">
+                        <div class="mvv-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="mvv-title">Our Mission</h3>
+                        <p>To celebrate and elevate Nigerian culinary heritage while providing world-class training that
+                            empowers Nigerians to excel locally and compete globally in the hospitality industry.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="mvv-card">
+                        <div class="mvv-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="mvv-title">Our Vision</h3>
+                        <p>To be Nigeria's premier hospitality training center, showcasing Nigerian cuisine excellence
+                            while preparing graduates to represent Nigerian culinary excellence internationally and
+                            across all continents.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="mvv-card">
+                        <div class="mvv-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="mvv-title">Our Values</h3>
+                        <p><strong>Nigerian Pride</strong> in our heritage<br>
+                            <strong>Ubuntu Philosophy</strong> - community first<br>
+                            <strong>Excellence</strong> in all we do<br>
+                            <strong>Innovation</strong> with tradition<br>
+                            <strong>Youth Empowerment</strong> for Nigeria's future
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Leadership Team</h2>
+                <p>Experienced Nigerian professionals championing culinary excellence and international standards</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-image"
+                            style="background-image: url('images/David\ Funmilayo.jpg');">
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">David Funmilayo Eunice</h4>
+                            <p class="team-position">CEO</p>
+                            <p class="team-bio">Visionary leader with extensive hospitality experience, passionate about
+                                showcasing Nigerian cuisine globally while creating opportunities for culinary
+                                professionals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-image"
+                            style="background-image: url('images/Simisoluwa\ David.jpg');">
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Mosimisoluwa David</h4>
+                            <p class="team-position">Manager</p>
+                            <p class="team-bio">Operations specialist ensuring seamless coordination between our
+                                catering services and educational programs, maintaining excellence in service delivery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-image"
+                            style="background-image: url('images/Tobiloba\ Favour.jpg');">
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Tobiloba Favour</h4>
+                            <p class="team-position">Event Manager</p>
+                            <p class="team-bio">Expert in Nigerian traditional and contemporary events, specializing in
+                                cultural celebrations, corporate functions, and luxury event coordination.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-image"
+                            style="background-image: url('images/Oyinlola1.jpg');">
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Ogunyemi Oyinlola Racheal</h4>
+                            <p class="team-position">Training & Operations Coordinator / Academic Director</p>
+                            <p class="team-bio">Educational specialist designing curricula that blend Nigerian culinary
+                                traditions with international standards, ensuring industry-relevant training programs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-section section-padding">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="500">0</span>+
+                        <div class="stat-label">Nigerian Events Catered Annually</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="1000">0</span>+
+                        <div class="stat-label">Young Nigerians Trained</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="10">0</span>+
+                        <div class="stat-label">Years Serving Nigeria</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="95">0</span>%
+                        <div class="stat-label">Graduate Employment Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Training Programs -->
+    <section class="section-padding naija-pattern">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Nigerian Culinary Programs</h2>
+                <p>Authentic Nigerian cuisine training with international standards for global opportunities</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="program-card">
+                        <div class="program-duration">6 Months</div>
+                        <h3 class="program-title">Professional Cooking</h3>
+                        <div class="program-specialties">Nigerian Specialties: Jollof Rice mastery, Pepper soup, Suya
+                            preparation, Pounded yam & Egusi, Plus French, Italian & Asian techniques</div>
+                        <p class="program-description">Complete culinary foundation covering Nigerian classics and
+                            international cuisine, kitchen management, and food cost control. Learn to prepare authentic
+                            jollof rice that wins competitions!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="program-card">
+                        <div class="program-duration">4 Months</div>
+                        <h3 class="program-title">Pastry Arts & Baking</h3>
+                        <div class="program-specialties">Local & International: Chin chin, Meat pie, Buns, Doughnuts,
+                            Plus French pastries, Wedding cakes, Chocolate work</div>
+                        <p class="program-description">Master both traditional Nigerian baked goods and international
+                            pastry techniques. From perfect chin chin to elaborate wedding cakes for diverse market
+                            opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="program-card">
+                        <div class="program-duration">3 Months</div>
+                        <h3 class="program-title">Food Service Management</h3>
+                        <div class="program-specialties">Nigerian Business Focus: Local regulations, NAFDAC compliance,
+                            Nigerian customer service, Traditional event catering</div>
+                        <p class="program-description">Restaurant management, catering business setup, staff training,
+                            and financial planning adapted for the Nigerian market and regulatory environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <div class="col-lg-12">
+                    <div class="program-card text-center">
+                        <div class="program-duration">Ongoing</div>
+                        <h3 class="program-title">Event Management and Decorations</h3>
+                        <div class="program-specialties">Nigerian Event Expertise: Traditional weddings, naming
+                            ceremonies, corporate events, festival catering</div>
+                        <p class="program-description">Comprehensive training in managing Nigerian cultural events,
+                            understanding traditional requirements, modern event trends, decoration techniques, and
+                            client management in the Nigerian context.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Nigerian Expertise -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Folamid in Nigeria?</h2>
+                <p>What makes us Nigeria's leading culinary training and catering excellence center</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4 class="expertise-title">Authentic Nigerian Cuisine</h4>
+                        <p>Master traditional Nigerian dishes with proper techniques - from perfect jollof rice and rich
+                            pepper soups to traditional swallow and authentic suya preparation.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4 class="expertise-title">Nigerian Event Expertise</h4>
+                        <p>Specialists in Nigerian traditional weddings, naming ceremonies, and cultural celebrations
+                            with deep understanding of customs and expectations.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="expertise-title">Youth Empowerment Focus</h4>
+                        <p>Dedicated to empowering young Nigerians with marketable skills, creating job opportunities
+                            and supporting entrepreneurship in the hospitality sector.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="expertise-title">NAFDAC Compliance Training</h4>
+                        <p>Comprehensive food safety training covering Nigerian regulatory requirements, NAFDAC
+                            guidelines, and local health standards for business compliance.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="expertise-title">Industry Connections</h4>
+                        <p>Strong partnerships with leading Nigerian hotels, restaurants, and event companies ensuring
+                            excellent job placement opportunities for our graduates.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="expertise-title">International Standards</h4>
+                        <p>Nigerian cuisine training with international presentation and service standards, preparing
+                            students to work anywhere in the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Folamid Advantage</h2>
+                <p>Combining Nigerian heritage with world-class training standards</p>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <img src="images/WhatsApp Image 2025-08-13 at 16.14.39_1b8f0d80.jpg"
+                        alt="Nigerian professional kitchen training" class="img-fluid rounded-4 shadow-lg fade-in">
+                </div>
+                <div class="col-lg-6">
+                    <div class="fade-in">
+                        <h3 class="mb-4" style="color: var(--dark-green);">Proudly Nigerian, Globally Competitive</h3>
+
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--dark-green);">Cultural Authenticity</h5>
+                                <p>Deep understanding of Nigerian food culture, traditional cooking methods, and
+                                    authentic flavor profiles passed down through generations.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--dark-green);">Local Market Knowledge</h5>
+                                <p>Training adapted for Nigerian business environment, understanding local suppliers,
+                                    customer preferences, and market opportunities.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--dark-green);">Global Network</h5>
+                                <p>Connections across Africa, Europe, and the Americas providing opportunities for
+                                    graduates to work internationally and represent Nigerian excellence worldwide.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--dark-green);">Community Impact</h5>
+                                <p>Committed to developing Nigeria's hospitality sector, creating jobs, and supporting
+                                    local food entrepreneurs and small businesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section section-padding">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Join Nigeria's Culinary Excellence Revolution</h2>
+                    <p class="fs-5 mb-5">Whether you're planning an authentic Nigerian celebration or building your
+                        culinary career, experience the perfect blend of tradition and innovation with Folamid.</p>
+
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <a href="#contact" class="cta-btn">
+                            <i class="fas fa-calendar-check me-2"></i>
+                            Book Our Catering
+                        </a>
+                        <a href="#school" class="cta-btn">
+                            <i class="fas fa-graduation-cap me-2"></i>
+                            Start Your Training
+                        </a>
+                        <a href="#contact" class="cta-btn">
+                            <i class="fas fa-phone me-2"></i>
+                            Call Us Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5><img src="images/folamid logo.png" alt="Folamid Logo"
+                            style="height: 30px; margin-right: 10px;">Folamid Catering & Event Planning LTD</h5>
+                    <p class="mb-3">Nigeria's premier culinary service provider and vocational training institution,
+                        proudly celebrating Nigerian cuisine while preparing students for global opportunities.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#school">Vocational School</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5>Our Nigerian Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Traditional Wedding Catering</a></li>
+                        <li><a href="#">Corporate Nigerian Cuisine</a></li>
+                        <li><a href="#">Cultural Event Planning</a></li>
+                        <li><a href="#">Nigerian Cooking Classes</a></li>
+                        <li><a href="#">Food Safety Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Victoria Island, Lagos, Nigeria</p>
+                        <p><i class="fas fa-phone me-2"></i>+234 801 234 5678</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@folamidcatering.com</p>
+                        <p><i class="fas fa-clock me-2"></i>Mon - Fri: 8AM - 6PM (WAT)</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4" style="border-color: var(--naija-gold);">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Folamid Catering and Event Planning Limited. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Terms of Service</a> |
+                        <a href="#">Sitemap</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animate hero content
+            const heroElements = document.querySelectorAll('.hero-content .fade-in');
+            heroElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('animate');
+                }, index * 200);
+            });
+
+            // Observe timeline items
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => observer.observe(item));
+
+            // Observe cards
+            const cards = document.querySelectorAll('.team-card, .mvv-card, .expertise-card, .program-card, .fade-in');
+            cards.forEach(card => observer.observe(card));
+
+            // Statistics counter animation
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-count'));
+                        let current = 0;
+                        const increment = target / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            entry.target.textContent = Math.floor(current);
+                            if (current >= target) {
+                                entry.target.textContent = target;
+                                clearInterval(timer);
+                            }
+                        }, 30);
+                    }
+                });
+            }, observerOptions);
+
+            statNumbers.forEach(stat => statsObserver.observe(stat));
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Navbar background change on scroll
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 100) {
+                    navbar.style.background = 'white';
+                    navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.2)';
+                } else {
+                    navbar.style.background = 'white';
+                    navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+                }
+            });
+        });
+
+        // Staggered animation for timeline items
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animate');
+                    }, index * 200);
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => timelineObserver.observe(item));
+        });
+    </script>
+</body>
+
+</html>

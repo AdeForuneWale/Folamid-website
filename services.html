@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Folamid Catering and Event Planning Limited</title>
+    <meta name="description"
+        content="Premium Nigerian catering, event management, and culinary training services. From traditional weddings to corporate events, experience authentic Nigerian hospitality with international standards.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/folamid logo.png">
+    <link rel="shortcut icon" type="image/png" href="images/folamid logo.png">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6.4 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-orange: #FF8C42;
+            --folamid-green: #4CAF50;
+            --dark-green: #2E7D32;
+            --cream-white: #FFF8F3;
+            --dark-brown: #3E2723;
+            --light-orange: #FFE0D1;
+            --naija-gold: #FFD700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--cream-white);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--dark-green) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-orange) !important;
+            transform: translateY(-2px);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-section {
+            background: var(--light-orange);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb {
+            background: none;
+            margin-bottom: 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--dark-green);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Section Styling */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            opacity: 0;
+            transform: translateY(30px);
+            border-top: 5px solid var(--primary-orange);
+        }
+
+        .service-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--primary-orange), var(--folamid-green));
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-card:hover .service-overlay {
+            opacity: 0.9;
+        }
+
+        .service-overlay-text {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--folamid-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-title {
+            color: var(--dark-green);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features li i {
+            color: var(--primary-orange);
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .service-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--folamid-green);
+            margin-bottom: 1rem;
+        }
+
+        .btn-service {
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-service:hover {
+            background: var(--folamid-green);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Featured Service */
+        .featured-service {
+            background: linear-gradient(135deg, var(--folamid-green), var(--dark-green));
+            color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-service::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(50px, -50px);
+        }
+
+        .featured-badge {
+            background: var(--naija-gold);
+            color: var(--dark-brown);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Process Steps */
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .process-step.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .process-number {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-orange);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--folamid-green);
+        }
+
+        .process-title {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            border: 2px solid var(--light-orange);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .testimonial-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-quote {
+            font-size: 3rem;
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-company {
+            color: var(--primary-orange);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-orange), var(--folamid-green));
+            color: white;
+            text-align: center;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--dark-green);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: var(--cream-white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            color: var(--dark-green);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-brown);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer h5 {
+            color: var(--naija-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-orange);
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: var(--primary-orange);
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--folamid-green);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .navbar-brand img {
+                height: 40px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .naija-pattern {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="2" fill="%23FFD700" opacity="0.1"/></svg>');
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/folamid logo.png" alt="Folamid Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="folamid_vocational_school.html">Vocational School</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section" style="margin-top: 76px;">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Premium Nigerian Services</h1>
+                <p class="fade-in">From authentic catering to professional training - experience the perfect blend of
+                    Nigerian heritage and international excellence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Services</h2>
+                <p>Comprehensive solutions for all your culinary, event, and training needs with authentic Nigerian
+                    excellence</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Catering Services -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="service-overlay">
+                                <div class="service-overlay-text">Premium Catering</div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3 class="service-title">Premium Catering Services</h3>
+                            <p class="service-description">Authentic Nigerian cuisine with international presentation.
+                                From intimate gatherings to grand celebrations.</p>
+
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Traditional Nigerian dishes</li>
+                                <li><i class="fas fa-check-circle"></i> International cuisine options</li>
+                                <li><i class="fas fa-check-circle"></i> Custom menu planning</li>
+                                <li><i class="fas fa-check-circle"></i> Professional service staff</li>
+                                <li><i class="fas fa-check-circle"></i> Equipment & setup included</li>
+                            </ul>
+
+                            <div class="service-price">From ₦15,000 per person</div>
+                            <button class="btn-service">Get Quote</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Management -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="service-overlay">
+                                <div class="service-overlay-text">Event Management</div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h3 class="service-title">Full Event Management</h3>
+                            <p class="service-description">Complete event planning and coordination for Nigerian
+                                traditional and contemporary celebrations.</p>
+
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Traditional weddings</li>
+                                <li><i class="fas fa-check-circle"></i> Corporate events</li>
+                                <li><i class="fas fa-check-circle"></i> Naming ceremonies</li>
+                                <li><i class="fas fa-check-circle"></i> Birthday celebrations</li>
+                                <li><i class="fas fa-check-circle"></i> Cultural festivals</li>
+                            </ul>
+
+                            <div class="service-price">From ₦500,000 per event</div>
+                            <button class="btn-service">Plan Event</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Culinary Training -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image"
+                            style="background-image: url('images/Culinary\ Training\ Programs.jpg');">
+                            <div class="service-overlay">
+                                <div class="service-overlay-text">Professional Training</div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="service-title">Culinary Training Programs</h3>
+                            <p class="service-description">Professional culinary education combining Nigerian
+                                specialties with international techniques.</p>
+
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> 6-month cooking program</li>
+                                <li><i class="fas fa-check-circle"></i> 4-month baking & pastry</li>
+                                <li><i class="fas fa-check-circle"></i> 3-month food service management</li>
+                                <li><i class="fas fa-check-circle"></i> Industry certifications</li>
+                                <li><i class="fas fa-check-circle"></i> Job placement assistance</li>
+                            </ul>
+
+                            <div class="service-price">From ₦250,000 per program</div>
+                            <button class="btn-service">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Catering -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1515669097368-22e68427d265?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="service-overlay">
+                                <div class="service-overlay-text">Corporate Solutions</div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3 class="service-title">Corporate Catering</h3>
+                            <p class="service-description">Professional catering solutions for business meetings,
+                                conferences, and corporate events.</p>
+
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Daily office meals</li>
+                                <li><i class="fas fa-check-circle"></i> Conference catering</li>
+                                <li><i class="fas fa-check-circle"></i> Executive boardroom service</li>
+                                <li><i class="fas fa-check-circle"></i> Company celebrations</li>
+                                <li><i class="fas fa-check-circle"></i> Flexible delivery schedules</li>
+                            </ul>
+
+                            <div class="service-price">From ₦8,000 per person</div>
+                            <button class="btn-service">Book Corporate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wedding Packages -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="service-overlay">
+                                <div class="service-overlay-text">Wedding Celebrations</div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="service-title">Nigerian Wedding Packages</h3>
+                            <p class="service-description">Complete traditional and white wedding services with
+                                authentic Nigerian cultural elements.</p>
+
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Traditional ceremony catering</li>
+                                <li><i class="fas fa-check-circle"></i> Reception management</li>
+                                <li><i class="fas fa-check-circle"></i> Cultural entertainment coordination</li>
+                                <li><i class="fas fa-check-circle"></i> Bridal party catering</li>
+                                <li><i class="fas fa-check-circle"></i> Photography meal planning</li>
+                            </ul>
+
+                            <div class="service-price">From ₦1,500,000 complete package</div>
+                            <button class="btn-service">Plan Wedding</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Chef Services -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image"
+                            style="background-image: url('images/personal\ chef.jpg');">
+                            <div class="service-overlay">
+                                <div class="service-overlay-text">Personal Chef</div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h3 class="service-title">Personal Chef Services</h3>
+                            <p class="service-description">Private chef services for individuals and families seeking
+                                personalized Nigerian and international cuisine.</p>
+
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> In-home cooking services</li>
+                                <li><i class="fas fa-check-circle"></i> Meal prep and planning</li>
+                                <li><i class="fas fa-check-circle"></i> Dietary accommodation</li>
+                                <li><i class="fas fa-check-circle"></i> Special occasion cooking</li>
+                                <li><i class="fas fa-check-circle"></i> Kitchen organization</li>
+                            </ul>
+
+                            <div class="service-price">From ₦50,000 per day</div>
+                            <button class="btn-service">Hire Chef</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Service -->
+    <section class="section-padding bg-light naija-pattern">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="featured-service fade-in">
+                        <div class="featured-badge">Most Popular</div>
+                        <h2 class="mb-4">Complete Nigerian Wedding Experience</h2>
+                        <p class="fs-5 mb-4">Our signature service combining traditional Nigerian wedding catering,
+                            cultural event management, and authentic ceremonial coordination. From engagement to
+                            reception, we handle every detail with cultural authenticity and modern excellence.</p>
+                        <div class="row text-center mt-4">
+                            <div class="col-md-4">
+                                <h3 class="text-warning">200+</h3>
+                                <p>Weddings Catered</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h3 class="text-warning">98%</h3>
+                                <p>Client Satisfaction</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h3 class="text-warning">50+</h3>
+                                <p>Cultural Dishes</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="cta-btn mt-4">Book Your Wedding</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>How We Work</h2>
+                <p>Our proven process ensures exceptional service delivery for every client</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h4 class="process-title">Consultation</h4>
+                        <p>We discuss your needs, preferences, and cultural requirements to create the perfect plan for
+                            your event or training goals.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h4 class="process-title">Custom Planning</h4>
+                        <p>Our team creates a detailed proposal with menu options, timeline, and all service details
+                            tailored to your specifications.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h4 class="process-title">Preparation</h4>
+                        <p>Professional preparation using the finest ingredients, traditional techniques, and modern
+                            equipment to ensure excellence.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <h4 class="process-title">Flawless Execution</h4>
+                        <p>On-time delivery and professional service execution, ensuring your event runs smoothly and
+                            exceeds expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding bg-light naija-pattern">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from satisfied clients who experienced our authentic Nigerian hospitality</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"Folamid made our traditional wedding absolutely perfect! The jollof
+                            rice was the best our guests had ever tasted, and they handled every cultural detail with
+                            such care and authenticity."</p>
+                        <div class="testimonial-author">Adunni & Kemi Oladipo</div>
+                        <div class="testimonial-company">Traditional Wedding, Lagos</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"Our company has been using Folamid for all corporate events for 2
+                            years. Their professionalism, punctuality, and delicious Nigerian cuisine always impresses
+                            our international clients."</p>
+                        <div class="testimonial-author">Mrs. Sarah Johnson</div>
+                        <div class="testimonial-company">CEO, Victoria Island Bank</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"The culinary training program changed my life! I now run my own
+                            successful catering business. The combination of Nigerian and international techniques they
+                            taught was invaluable."</p>
+                        <div class="testimonial-author">Olumide Adebayo</div>
+                        <div class="testimonial-company">Graduate, Professional Cooking Program</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Where We Serve</h2>
+                <p>Bringing premium Nigerian hospitality across Lagos and beyond</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <h3 style="color: var(--dark-green); margin-bottom: 2rem;">Primary Service Areas in Lagos</h3>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt me-3"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                                <div>
+                                    <strong>Victoria Island</strong><br>
+                                    <small class="text-muted">Premium corporate and luxury events</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt me-3"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                                <div>
+                                    <strong>Ikoyi</strong><br>
+                                    <small class="text-muted">High-end residential and corporate catering</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt me-3"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                                <div>
+                                    <strong>Lekki</strong><br>
+                                    <small class="text-muted">Residential events and family celebrations</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt me-3"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                                <div>
+                                    <strong>Ikeja</strong><br>
+                                    <small class="text-muted">Corporate offices and business events</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt me-3"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                                <div>
+                                    <strong>Surulere</strong><br>
+                                    <small class="text-muted">Community and cultural events</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt me-3"
+                                    style="color: var(--primary-orange); font-size: 1.2rem;"></i>
+                                <div>
+                                    <strong>Mainland Lagos</strong><br>
+                                    <small class="text-muted">Traditional ceremonies and family events</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div
+                        style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 5px solid var(--folamid-green);">
+                        <h4 style="color: var(--dark-green); margin-bottom: 1.5rem;">Extended Coverage</h4>
+
+                        <div class="mb-3">
+                            <i class="fas fa-plane me-2" style="color: var(--primary-orange);"></i>
+                            <strong>National Events</strong><br>
+                            <small class="text-muted">Abuja, Port Harcourt, Kano</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <i class="fas fa-globe-africa me-2" style="color: var(--primary-orange);"></i>
+                            <strong>International</strong><br>
+                            <small class="text-muted">UK, USA, Canada (special arrangements)</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <i class="fas fa-clock me-2" style="color: var(--primary-orange);"></i>
+                            <strong>Delivery Times</strong><br>
+                            <small class="text-muted">Lagos: Same day | National: 48hrs notice</small>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="#contact" class="btn btn-outline-success">Check Coverage</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-light naija-pattern">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about our Nigerian catering and training services</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item"
+                            style="border: none; margin-bottom: 1rem; border-radius: 15px; overflow: hidden;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1"
+                                    style="background: white; border: none; font-weight: 600; color: var(--dark-green);">
+                                    What makes your Nigerian jollof rice special?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="background: white;">
+                                    Our jollof rice uses traditional Yoruba family recipes passed down through
+                                    generations, combined with premium local rice and authentic Nigerian spices. We
+                                    hand-source our tomatoes from Jos and use traditional cooking methods with modern
+                                    food safety standards.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item"
+                            style="border: none; margin-bottom: 1rem; border-radius: 15px; overflow: hidden;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2"
+                                    style="background: white; border: none; font-weight: 600; color: var(--dark-green);">
+                                    How far in advance should I book for a traditional wedding?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="background: white;">
+                                    We recommend booking traditional weddings at least 3-6 months in advance, especially
+                                    during peak seasons (December-January, June-August). This allows proper planning for
+                                    cultural requirements, menu customization, and sourcing authentic ingredients.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item"
+                            style="border: none; margin-bottom: 1rem; border-radius: 15px; overflow: hidden;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3"
+                                    style="background: white; border: none; font-weight: 600; color: var(--dark-green);">
+                                    Do you accommodate dietary restrictions and allergies?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="background: white;">
+                                    Absolutely! We cater to various dietary needs including vegetarian, vegan, halal,
+                                    gluten-free, and specific allergies. Our chefs can adapt traditional Nigerian dishes
+                                    to meet these requirements while maintaining authentic flavors.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item"
+                            style="border: none; margin-bottom: 1rem; border-radius: 15px; overflow: hidden;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4"
+                                    style="background: white; border: none; font-weight: 600; color: var(--dark-green);">
+                                    What certifications do your training programs provide?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="background: white;">
+                                    Our programs provide industry-recognized certifications in Professional Cooking,
+                                    Pastry Arts, Food Service Management, and NAFDAC food safety compliance. We also
+                                    offer international certifications that are recognized globally.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item"
+                            style="border: none; margin-bottom: 1rem; border-radius: 15px; overflow: hidden;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5"
+                                    style="background: white; border: none; font-weight: 600; color: var(--dark-green);">
+                                    Can you provide staffing for my event?
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="background: white;">
+                                    Yes! We provide complete staffing including professional servers, bartenders, chefs,
+                                    and event coordinators. All our staff are trained in Nigerian hospitality standards
+                                    and professional service protocols.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section section-padding">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Ready to Experience Nigerian Excellence?</h2>
+                    <p class="fs-5 mb-5">Whether you're planning a celebration, need professional catering, or want to
+                        start your culinary career, we're here to serve you with authentic Nigerian hospitality and
+                        international standards.</p>
+
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <a href="#contact" class="cta-btn">
+                            <i class="fas fa-calendar-check me-2"></i>
+                            Book Our Services
+                        </a>
+                        <a href="#quote" class="cta-btn">
+                            <i class="fas fa-calculator me-2"></i>
+                            Get Free Quote
+                        </a>
+                        <a href="#contact" class="cta-btn">
+                            <i class="fas fa-phone me-2"></i>
+                            Call +234 801 234 5678
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5><img src="images/folamid logo.png" alt="Folamid Logo"
+                            style="height: 30px; margin-right: 10px;">Folamid Catering & Event Planning LTD</h5>
+                    <p class="mb-3">Nigeria's premier culinary service provider and vocational training institution,
+                        proudly celebrating Nigerian cuisine while preparing students for global opportunities.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="folamid_vocational_school.html">Vocational School</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5>Our Nigerian Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Traditional Wedding Catering</a></li>
+                        <li><a href="#">Corporate Nigerian Cuisine</a></li>
+                        <li><a href="#">Cultural Event Planning</a></li>
+                        <li><a href="#">Nigerian Cooking Classes</a></li>
+                        <li><a href="#">Food Safety Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Victoria Island, Lagos, Nigeria</p>
+                        <p><i class="fas fa-phone me-2"></i>+234 801 234 5678</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@folamidcatering.com</p>
+                        <p><i class="fas fa-clock me-2"></i>Mon - Fri: 8AM - 6PM (WAT)</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4" style="border-color: var(--naija-gold);">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Folamid Catering and Event Planning Limited. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Terms of Service</a> |
+                        <a href="#">Sitemap</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animate hero content
+            const heroElements = document.querySelectorAll('.hero-content .fade-in');
+            heroElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('animate');
+                }, index * 200);
+            });
+
+            // Observe cards and elements for animation
+            const animatedElements = document.querySelectorAll('.service-card, .process-step, .testimonial-card, .fade-in');
+            animatedElements.forEach(element => observer.observe(element));
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Navbar background change on scroll
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 100) {
+                    navbar.style.background = 'white';
+                    navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.2)';
+                } else {
+                    navbar.style.background = 'white';
+                    navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+                }
+            });
+
+            // Service card hover effects
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-10px)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Button interactions
+            document.querySelectorAll('.btn-service').forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Add click animation
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+
+                    // Here you would typically handle the booking/quote request
+                    console.log('Service requested:', this.textContent);
+                });
+            });
+        });
+
+        // Staggered animation for service cards
+        const serviceObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animate');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => serviceObserver.observe(card));
+        });
+    </script>
+</body>
+
+</html>

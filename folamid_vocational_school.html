@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Folamid Vocational School — Culinary Education | Folamid Catering & Event Management Limited</title>
+    <meta name="description"
+        content="Premier Culinary School in Nigeria. Professional Cooking, Pastry Arts, Food Service Management. Learn Nigerian & International cuisines. Job placement guarantee in Lagos, Abuja & beyond." />
+    <meta name="keywords"
+        content="culinary school Nigeria, vocational culinary Lagos, Nigerian cuisine training, jollof rice cooking class, suya preparation, pastry arts Lagos, chef training Nigeria, catering education" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/folamid logo.png">
+    <link rel="apple-touch-icon" href="images/folamid logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary-orange: #FF8C42;
+            --folamid-green: #4CAF50;
+            --secondary-gold: #FFB347;
+            --warm-brown: #8B4513;
+            --dark-brown: #654321;
+            --cream: #FFF8DC;
+            --white: #FFFFFF;
+            --dark-text: #2C2C2C;
+            --light-gray: #F5F5F5;
+            --nigerian-green: #008751;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            overflow-x: hidden
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, .95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
+            transition: all .3s ease;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 45px;
+            width: auto;
+            margin-right: 0.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 .5rem;
+            color: var(--dark-text) !important;
+            position: relative;
+            transition: color .3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-orange) !important;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -6px;
+            height: 2px;
+            width: 0;
+            background: var(--primary-orange);
+            transition: all .3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            left: 0;
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero-voc {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease .2s both
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            opacity: .95;
+            max-width: 760px
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(45deg, var(--primary-orange), var(--folamid-green));
+            border: none;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            transition: transform .25s ease, box-shadow .25s ease;
+            color: #fff;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(255, 140, 66, .35)
+        }
+
+        .btn-outline-custom {
+            border: 2px solid #fff;
+            color: #fff;
+            background: transparent;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all .25s ease;
+            letter-spacing: .5px
+        }
+
+        .btn-outline-custom:hover {
+            background: #fff;
+            color: var(--dark-text);
+            box-shadow: 0 12px 28px rgba(255, 255, 255, .25)
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-wrap {
+            background: var(--cream);
+            border-top: 1px solid rgba(0, 0, 0, .05);
+            border-bottom: 1px solid rgba(0, 0, 0, .05)
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: var(--folamid-green)
+        }
+
+        .breadcrumb .active {
+            color: var(--dark-brown);
+            font-weight: 600
+        }
+
+        /* Section shells */
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--dark-brown);
+            margin-bottom: .5rem
+        }
+
+        .section-subtitle {
+            color: #666;
+            max-width: 720px
+        }
+
+        .bg-cream {
+            background: var(--cream)
+        }
+
+        .bg-light {
+            background: var(--light-gray)
+        }
+
+        .card-lite {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            background: #fff;
+        }
+
+        /* Program cards */
+        .program-card {
+            overflow: hidden;
+            transition: transform .25s ease, box-shadow .25s ease
+        }
+
+        .program-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 36px rgba(0, 0, 0, .12)
+        }
+
+        .program-tag {
+            display: inline-block;
+            background: var(--primary-orange);
+            color: #fff;
+            padding: .25rem .6rem;
+            border-radius: 999px;
+            font-size: .8rem
+        }
+
+        .nigerian-flag {
+            background: linear-gradient(to right, var(--nigerian-green) 50%, #fff 50%);
+            color: var(--nigerian-green);
+            font-weight: 600;
+            padding: .3rem .8rem;
+            border-radius: 20px;
+            font-size: .85rem;
+            border: 2px solid var(--nigerian-green);
+        }
+
+        /* Course details accordions */
+        .accordion-button {
+            font-weight: 600
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--dark-brown);
+            background: rgba(255, 140, 66, .1);
+        }
+
+        .list-check li {
+            margin: .4rem 0
+        }
+
+        .list-check i {
+            color: var(--folamid-green);
+            margin-right: .5rem
+        }
+
+        /* Faculty */
+        .faculty-card img {
+            height: 240px;
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px
+        }
+
+        .faculty-card .title {
+            color: var(--warm-brown);
+            font-weight: 600
+        }
+
+        /* Comparison table */
+        .table thead th {
+            background: rgba(255, 140, 66, .1);
+            color: var(--dark-brown);
+            border-bottom: 0
+        }
+
+        .filter-pill {
+            border: 1px solid var(--primary-orange);
+            color: var(--dark-brown);
+            background: #fff;
+            border-radius: 999px;
+            padding: .35rem .8rem;
+            cursor: pointer;
+            transition: all .2s ease;
+            font-weight: 500
+        }
+
+        .filter-pill.active,
+        .filter-pill:hover {
+            background: var(--primary-orange);
+            color: #fff
+        }
+
+        /* Gallery + lightbox */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+            transition: transform .25s ease
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03)
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, rgba(255, 140, 66, .75), rgba(76, 175, 80, .75));
+            opacity: 0;
+            transition: opacity .25s
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .9);
+            z-index: 10500
+        }
+
+        .lightbox-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 92%;
+            max-height: 92%
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 28px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer
+        }
+
+        /* Counters */
+        .stat-card {
+            background: var(--cream);
+            border-radius: 16px;
+            padding: 1.25rem;
+            text-align: center
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-orange)
+        }
+
+        .stat-label {
+            font-size: .9rem;
+            color: var(--warm-brown);
+            letter-spacing: .5px
+        }
+
+        /* Forms */
+        .form-control:focus {
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 .2rem rgba(255, 140, 66, .2)
+        }
+
+        .is-invalid {
+            border-color: #dc3545 !important
+        }
+
+        .progress-steps {
+            height: 8px;
+            background: #eee;
+            border-radius: 999px;
+            overflow: hidden
+        }
+
+        .progress-steps .bar {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(45deg, var(--primary-orange), var(--folamid-green));
+            transition: width .3s ease
+        }
+
+        .step {
+            display: none
+        }
+
+        .step.active {
+            display: block
+        }
+
+        /* CTA */
+        .cta-band {
+            background: linear-gradient(135deg, var(--primary-orange), var(--folamid-green));
+            color: #fff;
+            border-radius: 18px
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-brown);
+            color: #fff;
+            padding: 50px 0 30px
+        }
+
+        .footer h5 {
+            color: var(--primary-orange);
+            margin-bottom: 1.2rem;
+            font-weight: 600
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none
+        }
+
+        .footer a:hover {
+            color: var(--primary-orange)
+        }
+
+        .social-icons a {
+            color: #ccc;
+            font-size: 1.5rem;
+            margin-right: 1rem
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-orange)
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            text-align: center;
+            color: #ccc
+        }
+
+        /* Nigerian context highlights */
+        .nigerian-cuisine {
+            background: linear-gradient(45deg, rgba(0, 135, 81, .1), rgba(255, 140, 66, .1));
+            border-left: 4px solid var(--nigerian-green);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all .6s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        @media (max-width:768px) {
+            .hero-title {
+                font-size: 2.2rem
+            }
+
+            .hero-subtitle {
+                font-size: 1rem
+            }
+
+            .navbar-brand img {
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html#home">
+                <img src="images/folamid logo.png" alt="Folamid Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Vocational School</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary-custom" href="#enroll">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-voc" id="top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <span class="program-tag">Nigeria's Premier Culinary School</span>
+                            <span class="nigerian-flag">🇳🇬 Nigerian & International</span>
+                        </div>
+                        <h1 class="hero-title">Master Nigerian & Global Cuisines</h1>
+                        <p class="hero-subtitle mb-4">
+                            From perfect Jollof Rice to French pastries, learn authentic Nigerian dishes alongside
+                            international culinary techniques.
+                            Train with industry experts in Lagos, with job placement support across Nigeria and beyond.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#programs" class="btn btn-primary-custom">Explore Programs</a>
+                            <a href="#enroll" class="btn btn-outline-custom">Start Application</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-wrap py-2">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html#home"><i class="fa fa-home me-1"></i>Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Vocational School</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Programs Overview -->
+    <section class="py-5 bg-light" id="programs">
+        <div class="container">
+            <div class="mb-4 text-center">
+                <h2 class="section-title">Our Programs</h2>
+                <p class="section-subtitle mx-auto">Specialized training combining Nigerian culinary heritage with
+                    international standards for global career opportunities.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Professional Cooking -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-lite program-card h-100 reveal">
+                        <img src="images/efo egusi.jpg"
+                            class="w-100" style="height:200px;object-fit:cover" alt="Nigerian Professional Cooking" />
+                        <div class="p-3 p-lg-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">Professional Cooking</h5>
+                                <span class="program-tag">6 months</span>
+                            </div>
+                            <div class="nigerian-cuisine mb-3">
+                                <strong>Nigerian Specialties:</strong> Jollof Rice mastery, Pepper soup, Suya
+                                preparation, Pounded yam & Egusi, Plus French, Italian & Asian techniques
+                            </div>
+                            <p class="mb-3">Complete culinary foundation covering Nigerian classics and international
+                                cuisine, kitchen management, and food cost control.</p>
+                            <a href="#course-details" class="btn btn-link p-0">See curriculum <i
+                                    class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pastry Arts -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-lite program-card h-100 reveal">
+                        <img src="images/WhatsApp Image 2025-08-26 at 18.48.53_2c8c61ce.jpg"
+                            class="w-100" style="height:200px;object-fit:cover" alt="Nigerian Pastry Arts" />
+                        <div class="p-3 p-lg-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">Pastry Arts & Baking</h5>
+                                <span class="program-tag">4 months</span>
+                            </div>
+                            <div class="nigerian-cuisine mb-3">
+                                <strong>Local & International:</strong> Chin chin, Meat pie, Buns, Doughnuts, Plus
+                                French pastries, Wedding cakes, Chocolate work
+                            </div>
+                            <p class="mb-3">Master both traditional Nigerian baked goods and international pastry
+                                techniques for diverse market opportunities.</p>
+                            <a href="#course-details" class="btn btn-link p-0">See curriculum <i
+                                    class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Food Service Management -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-lite program-card h-100 reveal">
+                        <img src="images/food service management.jpg"
+                            class="w-100" style="height:200px;object-fit:cover"
+                            alt="Nigerian Food Service Management" />
+                        <div class="p-3 p-lg-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0">Food Service Management</h5>
+                                <span class="program-tag">3 months</span>
+                            </div>
+                            <div class="nigerian-cuisine mb-3">
+                                <strong>Nigerian Business Focus:</strong> Local regulations, NAFDAC compliance, Nigerian
+                                customer service, Traditional event catering
+                            </div>
+                            <p class="mb-3">Restaurant management, catering business setup, staff training, and
+                                financial planning adapted for the Nigerian market.</p>
+                            <a href="#course-details" class="btn btn-link p-0">See curriculum <i
+                                    class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick CTA -->
+            <div class="mt-4 text-center">
+                <a href="#enroll" class="btn btn-primary-custom">Apply for Next Intake</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details (Accordions) -->
+    <section class="py-5" id="course-details">
+        <div class="container">
+            <div class="row align-items-start g-4">
+                <div class="col-lg-7">
+                    <h2 class="section-title">Detailed Curriculum</h2>
+                    <p class="section-subtitle">In-depth training combining Nigerian culinary heritage with
+                        international techniques and business skills.</p>
+
+                    <div class="accordion" id="courseAccordion">
+                        <!-- Cooking -->
+                        <div class="accordion-item card-lite mb-3">
+                            <h2 class="accordion-header" id="h1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
+                                    Professional Cooking — 6 Months (Full-Time)
+                                </button>
+                            </h2>
+                            <div id="c1" class="accordion-collapse collapse show" aria-labelledby="h1"
+                                data-bs-parent="#courseAccordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="mb-2">Nigerian Cuisine Mastery</h6>
+                                            <ul class="list-unstyled list-check">
+                                                <li><i class="fa fa-check"></i> Perfect Jollof Rice (Party & Native)
+                                                </li>
+                                                <li><i class="fa fa-check"></i> Pepper soup varieties (Fish, Goat,
+                                                    Chicken)</li>
+                                                <li><i class="fa fa-check"></i> Suya & Kilishi preparation</li>
+                                                <li><i class="fa fa-check"></i> Egusi, Ogbono, Bitterleaf soups</li>
+                                                <li><i class="fa fa-check"></i> Pounded yam, Eba, Fufu techniques</li>
+                                            </ul>
+                                            <h6 class="mb-2">International Techniques</h6>
+                                            <ul class="list-unstyled list-check">
+                                                <li><i class="fa fa-check"></i> French mother sauces</li>
+                                                <li><i class="fa fa-check"></i> Italian pasta & risotto</li>
+                                                <li><i class="fa fa-check"></i> Asian stir-fry & curry</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6 class="mb-2">Career Outcomes</h6>
+                                            <ul class="list-unstyled list-check">
+                                                <li><i class="fa fa-check"></i> Hotel chef (Lagos, Abuja, PH)</li>
+                                                <li><i class="fa fa-check"></i> Restaurant line cook to sous chef</li>
+                                                <li><i class="fa fa-check"></i> Catering business owner</li>
+                                                <li><i class="fa fa-check"></i> International opportunities (Dubai, UK)
+                                                </li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <strong>Tuition:</strong> ₦850,000 <br>
+                                                <strong>Materials:</strong> ₦120,000 <br>
+                                                <small class="text-muted">Payment plans available</small>
+                                            </div>
+                                            <div class="mt-3">
+                                                <a class="btn btn-primary-custom" href="#enroll">Apply Now</a>
+                                                <a class="btn btn-outline-custom ms-2" href="#" download
+                                                    data-brochure="pastry">Download Brochure</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Management -->
+                        <div class="accordion-item card-lite">
+                            <h2 class="accordion-header" id="h3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+                                    Food Service Management — 3 Months (Part-Time options)
+                                </button>
+                            </h2>
+                            <div id="c3" class="accordion-collapse collapse" aria-labelledby="h3"
+                                data-bs-parent="#courseAccordion">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="mb-2">Nigerian Business Focus</h6>
+                                            <ul class="list-unstyled list-check">
+                                                <li><i class="fa fa-check"></i> NAFDAC & SON compliance</li>
+                                                <li><i class="fa fa-check"></i> CAC business registration</li>
+                                                <li><i class="fa fa-check"></i> Nigerian tax implications</li>
+                                                <li><i class="fa fa-check"></i> Local vendor relationships</li>
+                                                <li><i class="fa fa-check"></i> Traditional event catering (Weddings,
+                                                    Naming, Burial)</li>
+                                            </ul>
+                                            <h6 class="mb-2">International Standards</h6>
+                                            <ul class="list-unstyled list-check">
+                                                <li><i class="fa fa-check"></i> HACCP implementation</li>
+                                                <li><i class="fa fa-check"></i> ISO food safety standards</li>
+                                                <li><i class="fa fa-check"></i> Menu engineering & pricing</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6 class="mb-2">Career Outcomes</h6>
+                                            <ul class="list-unstyled list-check">
+                                                <li><i class="fa fa-check"></i> Restaurant manager</li>
+                                                <li><i class="fa fa-check"></i> Hotel food & beverage manager</li>
+                                                <li><i class="fa fa-check"></i> Catering business owner</li>
+                                                <li><i class="fa fa-check"></i> Food service consultant</li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <strong>Tuition:</strong> ₦480,000 <br>
+                                                <strong>Materials:</strong> ₦60,000 <br>
+                                                <small class="text-muted">Payment plans available</small>
+                                            </div>
+                                            <div class="mt-3">
+                                                <a class="btn btn-primary-custom" href="#enroll">Apply Now</a>
+                                                <a class="btn btn-outline-custom ms-2" href="#" download
+                                                    data-brochure="management">Download Brochure</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /accordion -->
+                </div>
+
+                <!-- Comparison + Finder -->
+                <div class="col-lg-5">
+                    <div class="card-lite p-4 p-lg-4 mb-4 reveal">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="mb-0">Compare Programs</h5>
+                            <div class="d-flex gap-2">
+                                <button class="filter-pill active" data-filter="all">All</button>
+                                <button class="filter-pill" data-filter="short">≤ 4 months</button>
+                                <button class="filter-pill" data-filter="long">≥ 6 months</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table align-middle mb-0" id="compareTable">
+                                <thead>
+                                    <tr>
+                                        <th>Program</th>
+                                        <th>Duration</th>
+                                        <th>Schedule</th>
+                                        <th>Focus</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-dur="6">
+                                        <td>Professional Cooking</td>
+                                        <td>6 mo</td>
+                                        <td>Mon–Fri</td>
+                                        <td>Nigerian & Global</td>
+                                    </tr>
+                                    <tr data-dur="4">
+                                        <td>Pastry Arts</td>
+                                        <td>4 mo</td>
+                                        <td>Mon–Thu</td>
+                                        <td>Baking & Cakes</td>
+                                    </tr>
+                                    <tr data-dur="3">
+                                        <td>Food Service Mgmt</td>
+                                        <td>3 mo</td>
+                                        <td>Weekends</td>
+                                        <td>Business & Mgmt</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Program Finder Quiz -->
+                    <div class="card-lite p-4 reveal">
+                        <h5 class="mb-3">Which culinary path suits you?</h5>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-custom text-start quiz-option" data-value="cooking">
+                                <i class="fa fa-utensils me-2"></i> I want to master Nigerian & international cuisines
+                            </button>
+                            <button class="btn btn-outline-custom text-start quiz-option" data-value="pastry">
+                                <i class="fa fa-birthday-cake me-2"></i> I love baking traditional & modern pastries
+                            </button>
+                            <button class="btn btn-outline-custom text-start quiz-option" data-value="management">
+                                <i class="fa fa-clipboard-list me-2"></i> I want to run a food business in Nigeria
+                            </button>
+                        </div>
+                        <div class="text-end mt-3">
+                            <button id="quizNext" class="btn btn-primary-custom" style="display:none;">Get
+                                Recommendation</button>
+                        </div>
+                        <div id="quizResult" class="alert alert-light border mt-3" style="display:none;">
+                            <h6 class="mb-1" id="resultTitle"></h6>
+                            <p class="mb-2" id="resultDescription"></p>
+                            <a href="#enroll" class="btn btn-primary-custom btn-sm">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty 
+    <section class="py-5 bg-cream" id="faculty">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section-title">Meet Our Expert Faculty</h2>
+                <p class="section-subtitle mx-auto">Learn from experienced Nigerian chefs and international culinary
+                    professionals with decades of industry experience.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-lite faculty-card h-100 text-center reveal">
+                        <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?auto=format&fit=crop&w=800&q=80"
+                            alt="Chef Amina Bello" />
+                        <div class="p-3">
+                            <div class="title">Chef Amina Bello</div>
+                            <div class="text-muted">Head of Nigerian Cuisine</div>
+                            <small>20+ years, Former Transcorp Hilton Executive Chef</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-lite faculty-card h-100 text-center reveal">
+                        <img src="https://images.unsplash.com/photo-1566554273541-37a9ca77b91b?auto=format&fit=crop&w=800&q=80"
+                            alt="Chef Emeka Okafor" />
+                        <div class="p-3">
+                            <div class="title">Chef Emeka Okafor</div>
+                            <div class="text-muted">International Cuisine & Techniques</div>
+                            <small>15+ years, Le Cordon Bleu Certified</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-lite faculty-card h-100 text-center reveal">
+                        <img src="https://images.unsplash.com/photo-1551836022-8b2858c9c69b?auto=format&fit=crop&w=800&q=80"
+                            alt="Chef Folake Adeyemi" />
+                        <div class="p-3">
+                            <div class="title">Chef Folake Adeyemi</div>
+                            <div class="text-muted">Pastry Arts & Nigerian Baking</div>
+                            <small>12+ years, Winner Best Baker Lagos 2020</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-lite faculty-card h-100 text-center reveal">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80"
+                            alt="Mr. Tunde Ajayi" />
+                        <div class="p-3">
+                            <div class="title">Mr. Tunde Ajayi</div>
+                            <div class="text-muted">Food Service Management</div>
+                            <small>18+ years, Former Radisson Blu Operations Manager</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Student Success Stories -->
+    <section class="py-5" id="success">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <h2 class="section-title">Success Stories</h2>
+                    <p class="section-subtitle">Our graduates work in top hotels across Nigeria, own successful
+                        restaurants, and some have secured international opportunities in Dubai, UK, and Canada.</p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-6">
+                            <div class="stat-card reveal">
+                                <div class="stat-number" data-count="94">0</div>
+                                <div class="stat-label">Job Placement Rate (%)</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card reveal">
+                                <div class="stat-number" data-count="89">0</div>
+                                <div class="stat-label">Graduation Rate (%)</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card reveal">
+                                <div class="stat-number" data-count="150">0</div>
+                                <div class="stat-label">Industry Partners</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card reveal">
+                                <div class="stat-number" data-count="400">0</div>
+                                <div class="stat-label">Alumni Network</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#enroll" class="btn btn-primary-custom mt-3">Join Our Next Cohort</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card-lite p-4 reveal">
+                        <blockquote class="mb-0">
+                            <p class="mb-3 fst-italic">"Folamid taught me both traditional Nigerian cooking and
+                                international techniques. I now run the kitchen at a 4-star hotel in Abuja and my jollof
+                                rice is legendary!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="#"
+                                    class="rounded-circle me-3" alt="Alumni" width="56" height="56" />
+                                <div>
+                                    <div class="fw-semibold">Chike Okwu</div>
+                                    <small class="text-muted">Head Chef, Grand Towers Hotel Abuja</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <div class="card-lite p-4 mt-3 reveal">
+                        <blockquote class="mb-0">
+                            <p class="mb-3 fst-italic">"The pastry program helped me perfect my chin chin recipe and
+                                learn French techniques. My online bakery now ships nationwide and I'm opening a
+                                physical store in Ikeja!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="#"
+                                    class="rounded-circle me-3" alt="Alumni" width="56" height="56" />
+                                <div>
+                                    <div class="fw-semibold">Adunni Bakare</div>
+                                    <small class="text-muted">Owner, Sweet Lagos Bakery</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities & Virtual Tour 
+    <section class="py-5 bg-light" id="facilities">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section-title">World-Class Facilities in Lagos</h2>
+                <p class="section-subtitle mx-auto">Train in modern kitchen labs equipped with both traditional Nigerian
+                    cooking equipment and international-standard appliances.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1600&q=80')">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=60"
+                        alt="Modern Training Kitchen" />
+                    <div class="gallery-overlay"><i class="fa fa-search-plus text-white fs-2"></i></div>
+                </div>
+                <div class="gallery-item reveal"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=1600&q=80')">
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=60"
+                        alt="Nigerian Cuisine Lab" />
+                    <div class="gallery-overlay"><i class="fa fa-search-plus text-white fs-2"></i></div>
+                </div>
+                <div class="gallery-item reveal"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80')">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=60"
+                        alt="Pastry & Baking Lab" />
+                    <div class="gallery-overlay"><i class="fa fa-search-plus text-white fs-2"></i></div>
+                </div>
+                <div class="gallery-item reveal"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1600&q=80')">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=60"
+                        alt="Demo Classroom" />
+                    <div class="gallery-overlay"><i class="fa fa-search-plus text-white fs-2"></i></div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#visit" class="btn btn-outline-custom">Book a Campus Visit</a>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Admission Requirements -->
+    <section class="py-5" id="admissions">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Admission Requirements</h2>
+                    <p class="section-subtitle">Simple requirements designed to ensure you're ready to succeed in our
+                        intensive programs.</p>
+                    <ul class="list-unstyled list-check">
+                        <li><i class="fa fa-check"></i> Completed application form</li>
+                        <li><i class="fa fa-check"></i> Valid Nigerian ID, International Passport, or Driver's License
+                        </li>
+                        <li><i class="fa fa-check"></i> WAEC, NECO, or equivalent certificate</li>
+                        <li><i class="fa fa-check"></i> Application fee (₦15,000)</li>
+                        <li><i class="fa fa-check"></i> Basic English proficiency (spoken interview)</li>
+                    </ul>
+                    <h6 class="mt-3">Application Process</h6>
+                    <ol class="mb-0">
+                        <li>Submit online application with documents</li>
+                        <li>Attend practical assessment & interview (Lagos campus)</li>
+                        <li>Receive admission decision within 5 working days</li>
+                        <li>Complete enrollment & attend orientation</li>
+                    </ol>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-lite p-4 reveal">
+                        <h5 class="mb-3">Program Fees (2025)</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Program</th>
+                                        <th>Tuition (₦)</th>
+                                        <th>Materials (₦)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Professional Cooking</td>
+                                        <td>850,000</td>
+                                        <td>120,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pastry Arts & Baking</td>
+                                        <td>620,000</td>
+                                        <td>90,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Food Service Management</td>
+                                        <td>480,000</td>
+                                        <td>60,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <small class="text-muted">* Flexible payment plans available (3-6 months)</small><br>
+                        <small class="text-muted">* Limited scholarships for exceptional candidates</small><br>
+                        <small class="text-muted">* Early bird discounts: Apply 2 months ahead for 10% off</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Calendar 
+    <section class="py-5 bg-cream" id="calendar">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section-title">2025/2026 Academic Calendar</h2>
+                <p class="section-subtitle mx-auto">Three intakes per year to fit your schedule and career goals.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-lite p-4 h-100 text-center reveal">
+                        <div class="program-tag mb-2">October 6, 2025</div>
+                        <h5>Fall 2025 Intake</h5>
+                        <p class="mb-2">Application closes: September 15<br>
+                            <small class="text-muted">Perfect for career change</small>
+                        </p>
+                        <a href="#enroll" class="btn btn-primary-custom btn-sm">Apply Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-lite p-4 h-100 text-center reveal">
+                        <div class="program-tag mb-2">January 12, 2026</div>
+                        <h5>Winter 2026 Intake</h5>
+                        <p class="mb-2">Application closes: December 10<br>
+                            <small class="text-muted">Start the new year right</small>
+                        </p>
+                        <a href="#enroll" class="btn btn-primary-custom btn-sm">Apply</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-lite p-4 h-100 text-center reveal">
+                        <div class="program-tag mb-2">April 20, 2026</div>
+                        <h5>Spring 2026 Intake</h5>
+                        <p class="mb-2">Application closes: March 20<br>
+                            <small class="text-muted">Beat the competition</small>
+                        </p>
+                        <a href="#enroll" class="btn btn-primary-custom btn-sm">Apply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Enrollment Form -->
+    <section class="py-5" id="enroll">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <h2 class="section-title">Apply Now</h2>
+                    <p class="section-subtitle">Take the first step towards your culinary career. Complete your
+                        application and we'll contact you within 24 hours.</p>
+
+                    <div class="progress-steps mb-3">
+                        <div class="bar" id="enrollBar"></div>
+                    </div>
+                    <form id="enrollForm" novalidate>
+                        <!-- Step 1: Personal Info -->
+                        <div class="step active">
+                            <h5 class="mb-3">Personal Information</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Name<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email<span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone<span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" name="phone" placeholder="+234 xxx xxx xxxx"
+                                        required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Location<span class="text-danger">*</span></label>
+                                    <select class="form-select" name="location" required>
+                                        <option value="">Select your location</option>
+                                        <option>Lagos State</option>
+                                        <option>Abuja (FCT)</option>
+                                        <option>Rivers State</option>
+                                        <option>Kano State</option>
+                                        <option>Oyo State</option>
+                                        <option>Other Nigerian State</option>
+                                        <option>International</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 2: Program Selection -->
+                        <div class="step">
+                            <h5 class="mb-3">Program & Goals</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Preferred Program<span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" name="program" required>
+                                        <option value="">Select a program</option>
+                                        <option>Professional Cooking (6 months)</option>
+                                        <option>Pastry Arts & Baking (4 months)</option>
+                                        <option>Food Service Management (3 months)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Preferred Intake<span class="text-danger">*</span></label>
+                                    <select class="form-select" name="intake" required>
+                                        <option value="">Choose intake</option>
+                                        <option>Fall 2025 (October)</option>
+                                        <option>Winter 2026 (January)</option>
+                                        <option>Spring 2026 (April)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Why do you want to study culinary arts?</label>
+                                    <textarea class="form-control" rows="3" name="goals"
+                                        placeholder="Tell us about your career goals, culinary interests, or previous experience"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Do you have any cooking experience?</label>
+                                    <select class="form-select" name="experience">
+                                        <option>No experience (complete beginner)</option>
+                                        <option>Home cooking only</option>
+                                        <option>Some restaurant experience</option>
+                                        <option>Professional cooking experience</option>
+                                        <option>Culinary school graduate</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 3: Final Details -->
+                        <div class="step">
+                            <h5 class="mb-3">Final Details</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Do you need financial assistance?</label>
+                                    <select class="form-select" name="aid">
+                                        <option>No, I can pay in full</option>
+                                        <option>Yes, I need a payment plan</option>
+                                        <option>Yes, I'd like to apply for scholarship</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Would you like to visit our campus?</label>
+                                    <select class="form-select" name="visit">
+                                        <option>No, not needed</option>
+                                        <option>Yes, schedule a visit</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">How did you hear about us?</label>
+                                    <select class="form-select" name="source">
+                                        <option>Google search</option>
+                                        <option>Facebook/Instagram</option>
+                                        <option>Friend/Family referral</option>
+                                        <option>Industry event</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="agree" required>
+                                        <label class="form-check-label" for="agree">
+                                            I certify that the information provided is accurate and I agree to the terms
+                                            and conditions.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <button type="button" class="btn btn-outline-custom" id="prevBtn" disabled>Previous</button>
+                            <div>
+                                <button type="button" class="btn btn-outline-custom me-2" id="saveDraft">Save
+                                    Draft</button>
+                                <button type="button" class="btn btn-primary-custom" id="nextBtn">Next Step</button>
+                                <button type="submit" class="btn btn-primary-custom" id="submitBtn"
+                                    style="display:none;">Submit Application</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="successMessage" class="alert alert-success mt-4" style="display:none;">
+                        <h5 class="mb-2">Application Submitted Successfully!</h5>
+                        <p class="mb-2">Thank you for applying to Folamid Vocational School. We have received your
+                            application and will contact you within 24 hours to schedule your interview and practical
+                            assessment.</p>
+                        <p class="mb-0"><strong>Next Steps:</strong> Check your email for confirmation details and
+                            prepare for your campus visit.</p>
+                    </div>
+                </div>
+
+                <!-- Application Tips -->
+                <div class="col-lg-5">
+                    <div class="card-lite p-4 mb-4 reveal">
+                        <h5 class="mb-3">Application Tips</h5>
+                        <ul class="list-unstyled list-check">
+                            <li><i class="fa fa-lightbulb text-warning"></i> Be specific about your culinary goals</li>
+                            <li><i class="fa fa-lightbulb text-warning"></i> Mention any Nigerian dishes you love to
+                                cook</li>
+                            <li><i class="fa fa-lightbulb text-warning"></i> Early applications get priority
+                                consideration</li>
+                            <li><i class="fa fa-lightbulb text-warning"></i> Scholarship applicants: highlight community
+                                involvement</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-lite p-4 mb-4 reveal">
+                        <h5 class="mb-3">Contact Our Admissions Team</h5>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fa fa-phone text-primary me-2"></i>
+                            <span>+234 803 XXX XXXX</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fa fa-envelope text-primary me-2"></i>
+                            <span>admissions@folamidschool.edu.ng</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                            <span>Lagos Campus: Shibiri Ojo</span>
+                        </div>
+                        <div class="mt-3">
+                            <small class="text-muted">Office Hours: Mon-Fri 8AM-5PM WAT</small>
+                        </div>
+                    </div>
+
+                    <div class="card-lite p-4 reveal">
+                        <h5 class="mb-3">Frequently Asked Questions</h5>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item border-0 mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq1" aria-expanded="false">
+                                        Do I need cooking experience to apply?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        No! Our programs welcome complete beginners. We start with fundamentals and
+                                        build up your skills progressively.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0 mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq2" aria-expanded="false">
+                                        Are payment plans available?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Yes, we offer flexible payment plans from 3-6 months. Contact our admissions
+                                        team for details.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq3" aria-expanded="false">
+                                        What about job placement support?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        We have partnerships with 150+ hotels, restaurants, and catering companies
+                                        across Nigeria. Our career services team provides resume help, interview prep,
+                                        and job placement assistance.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-5">
+        <div class="container">
+            <div class="cta-band p-4 p-md-5 text-center">
+                <h3 class="mb-3">Ready to Start Your Culinary Journey?</h3>
+                <p class="mb-4">Join Nigeria's most successful culinary graduates. Limited seats available for each
+                    intake.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="#enroll" class="btn btn-outline-custom">Apply Now</a>
+                    <a href="#facilities" class="btn btn-outline-custom">Schedule Campus Visit</a>
+                    <a href="tel:+234803XXXXXXX" class="btn btn-outline-custom">Call Admissions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/folamid logo.png" alt="Folamid Logo" height="40" class="me-2">
+                        <span class="h5 mb-0 text-white">Folamid Vocational School</span>
+                    </div>
+                    <p class="mb-3">Nigeria's premier culinary education institution, combining traditional Nigerian
+                        cooking with international culinary arts training.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h5>Programs</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#programs">Professional Cooking</a></li>
+                        <li><a href="#programs">Pastry Arts & Baking</a></li>
+                        <li><a href="#programs">Food Service Management</a></li>
+                        <li><a href="#admissions">Admission Requirements</a></li>
+                        <li><a href="#calendar">Academic Calendar</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h5>About</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#success">Success Stories</a></li>
+                        <li><a href="index.html#about">About Folamid</a></li>
+                        <li><a href="index.html#services">Catering Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h5>Admissions</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#enroll">Apply Online</a></li>
+                        <li><a href="#admissions">Requirements</a></li>
+                        <li><a href="#calendar">Application Deadlines</a></li>
+                        <li><a href="#facilities">Campus Tours</a></li>
+                        <li><a href="#success">Scholarships</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tel:+234803XXXXXXX">+234 803 XXX XXXX</a></li>
+                        <li><a href="mailto:info@folamidschool.edu.ng">info@folamidschool.edu.ng</a></li>
+                        <li>Victoria Island, Lagos<br>Nigeria</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Folamid Catering & Event Management Limited. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="me-3">Privacy Policy</a>
+                        <a href="#" class="me-3">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Reveal animations on scroll
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('visible');
+                }
+            });
+        }
+
+        // Counter animations
+        function animateCounters() {
+            const counters = document.querySelectorAll('[data-count]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 16);
+            });
+        }
+
+        // Multi-step form
+        let currentStep = 0;
+        const steps = document.querySelectorAll('.step');
+        const totalSteps = steps.length;
+        const progressBar = document.getElementById('enrollBar');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function showStep(n) {
+            steps.forEach(step => step.classList.remove('active'));
+            steps[n].classList.add('active');
+
+            progressBar.style.width = ((n + 1) / totalSteps) * 100 + '%';
+
+            prevBtn.disabled = n === 0;
+            nextBtn.style.display = n === totalSteps - 1 ? 'none' : 'inline-block';
+            submitBtn.style.display = n === totalSteps - 1 ? 'inline-block' : 'none';
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (validateStep(currentStep)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentStep--;
+            showStep(currentStep);
+        });
+
+        function validateStep(step) {
+            const currentStepElement = steps[step];
+            const requiredFields = currentStepElement.querySelectorAll('[required]');
+            let valid = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('is-invalid');
+                    valid = false;
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+
+            return valid;
+        }
+
+        // Form submission
+        document.getElementById('enrollForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (validateStep(currentStep)) {
+                document.getElementById('enrollForm').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        });
+
+        // Program comparison filters
+        document.querySelectorAll('.filter-pill').forEach(pill => {
+            pill.addEventListener('click', function () {
+                document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+                const rows = document.querySelectorAll('#compareTable tbody tr');
+
+                rows.forEach(row => {
+                    const duration = parseInt(row.getAttribute('data-dur'));
+                    let show = true;
+
+                    if (filter === 'short') show = duration <= 4;
+                    else if (filter === 'long') show = duration >= 6;
+
+                    row.style.display = show ? '' : 'none';
+                });
+            });
+        });
+
+        // Quiz functionality
+        let selectedPath = null;
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.addEventListener('click', function () {
+                document.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+                selectedPath = this.getAttribute('data-value');
+                document.getElementById('quizNext').style.display = 'inline-block';
+            });
+        });
+
+        document.getElementById('quizNext').addEventListener('click', function () {
+            const results = {
+                cooking: {
+                    title: "Professional Cooking Program",
+                    description: "Perfect for mastering both Nigerian classics and international cuisine techniques."
+                },
+                pastry: {
+                    title: "Pastry Arts & Baking Program",
+                    description: "Ideal for creating both traditional Nigerian baked goods and modern pastries."
+                },
+                management: {
+                    title: "Food Service Management Program",
+                    description: "Great for those wanting to run successful food businesses in Nigeria."
+                }
+            };
+
+            const result = results[selectedPath];
+            document.getElementById('resultTitle').textContent = result.title;
+            document.getElementById('resultDescription').textContent = result.description;
+            document.getElementById('quizResult').style.display = 'block';
+        });
+
+        // Lightbox functionality
+        function openLightbox(src) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightbox').style.display = 'block';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        // Save draft functionality
+        document.getElementById('saveDraft').addEventListener('click', function () {
+            const formData = new FormData(document.getElementById('enrollForm'));
+            const data = Object.fromEntries(formData);
+            localStorage.setItem('folamidDraft', JSON.stringify(data));
+
+            // Show temporary success message
+            const btn = this;
+            const originalText = btn.textContent;
+            btn.textContent = 'Draft Saved!';
+            btn.classList.add('btn-success');
+            btn.classList.remove('btn-outline-custom');
+
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove('btn-success');
+                btn.classList.add('btn-outline-custom');
+            }, 2000);
+        });
+
+        // Load draft on page load
+        window.addEventListener('load', function () {
+            const draft = localStorage.getItem('folamidDraft');
+            if (draft) {
+                const data = JSON.parse(draft);
+                Object.keys(data).forEach(key => {
+                    const field = document.querySelector(`[name="${key}"]`);
+                    if (field) field.value = data[key];
+                });
+            }
+        });
+
+        // Event listeners
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', () => {
+            revealOnScroll();
+
+            // Trigger counter animation when stats section is visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            const statsSection = document.getElementById('success');
+            if (statsSection) observer.observe(statsSection);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Brochure download simulation
+        document.querySelectorAll('[data-brochure]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const program = this.getAttribute('data-brochure');
+                // Simulate download
+                const a = document.createElement('a');
+                a.href = '#';
+                a.download = `Folamid-${program}-Program-Brochure.pdf`;
+                a.textContent = 'Downloading...';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+
+                // Show feedback
+                const originalText = this.textContent;
+                this.textContent = 'Downloaded!';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 2000);
+            });
+        });
+    </script>
+
+</body>
+
+<!--</html>uted">Payment plans available</small>
+</div>
+<div class="mt-3">
+    <a class="btn btn-primary-custom" href="#enroll">Apply Now</a>
+    <a class="btn btn-outline-custom ms-2" href="#" download data-brochure="cooking">Download Brochure</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+<!-- Pastry 
+<div class="accordion-item card-lite mb-3">
+    <h2 class="accordion-header" id="h2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2"
+            aria-expanded="false" aria-controls="c2">
+            Pastry Arts & Baking — 4 Months (Full-Time)
+        </button>
+    </h2>
+    <div id="c2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#courseAccordion">
+        <div class="accordion-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 class="mb-2">Nigerian Baking Specialties</h6>
+                    <ul class="list-unstyled list-check">
+                        <li><i class="fa fa-check"></i> Chin chin & Coconut candy</li>
+                        <li><i class="fa fa-check"></i> Nigerian meat pie mastery</li>
+                        <li><i class="fa fa-check"></i> Buns, sausage roll, scotch egg</li>
+                        <li><i class="fa fa-check"></i> Traditional wedding cakes</li>
+                        <li><i class="fa fa-check"></i> Puff puff & doughnuts</li>
+                    </ul>
+                    <h6 class="mb-2">International Pastry</h6>
+                    <ul class="list-unstyled list-check">
+                        <li><i class="fa fa-check"></i> French croissants & viennoiserie</li>
+                        <li><i class="fa fa-check"></i> Chocolate tempering & bonbons</li>
+                        <li><i class="fa fa-check"></i> Wedding cake decoration</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="mb-2">Career Outcomes</h6>
+                    <ul class="list-unstyled list-check">
+                        <li><i class="fa fa-check"></i> Hotel pastry chef</li>
+                        <li><i class="fa fa-check"></i> Bakery owner</li>
+                        <li><i class="fa fa-check"></i> Wedding cake specialist</li>
+                        <li><i class="fa fa-check"></i> Online bakery business</li>
+                    </ul>
+                    <div class="mt-3">
+                        <strong>Tuition:</strong> ₦620,000 <br>
+                        <strong>Materials:</strong> ₦90,000 <br>
+                        <small class="text-m -->

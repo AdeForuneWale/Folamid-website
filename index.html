@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="icon" type="image/png" href="images/folamid logo.png">
+    <link rel="shortcut icon" type="image/png" href="images/folamid logo.png">
+    <title>Folamid Catering &amp; Event Planning Limited - Nigerian &amp; Intercontinental Cuisine Excellence</title>
+    <meta
+        content="Leading catering, event management, and culinary education services in Nigeria. Specializing in authentic Nigerian cuisine and international dishes. Professional training, exquisite cuisine, and unforgettable events."
+        name="description" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --primary-orange: #FF8C42;
+            --secondary-orange: #FFA726;
+            --folamid-green: #4CAF50;
+            --dark-green: #2E7D32;
+            --warm-brown: #8B4513;
+            --dark-brown: #654321;
+            --cream: #FFF8DC;
+            --white: #FFFFFF;
+            --dark-text: #2C2C2C;
+            --light-gray: #F5F5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--folamid-green) !important;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 60px;
+            width: auto;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 0.5rem;
+            color: var(--dark-text) !important;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--folamid-green) !important;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: var(--folamid-green);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cuisine-highlight {
+            background: linear-gradient(45deg, var(--folamid-green), var(--primary-orange));
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(45deg, var(--folamid-green), var(--primary-orange));
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid white;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            background: transparent;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--dark-text);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--folamid-green);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(45deg, var(--folamid-green), var(--primary-orange), var(--secondary-orange));
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--folamid-green);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-brown);
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .btn-learn-more {
+            background: transparent;
+            border: 2px solid var(--folamid-green);
+            color: var(--folamid-green);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-learn-more:hover {
+            background: var(--folamid-green);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-image {
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .stats-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--cream);
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--folamid-green);
+            display: block;
+        }
+
+        .stats-label {
+            font-size: 0.9rem;
+            color: var(--dark-brown);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Cuisine Specialties */
+        .cuisine-section {
+            padding: 100px 0;
+            background: var(--dark-brown);
+            color: white;
+            position: relative;
+        }
+
+        .cuisine-section .section-title {
+            color: var(--folamid-green);
+        }
+
+        .cuisine-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cuisine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .cuisine-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .cuisine-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .cuisine-card h4 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+
+        .cuisine-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cuisine-list li {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+        }
+
+        .cuisine-list li::before {
+            content: '▪';
+            color: var(--primary-orange);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--folamid-green), var(--primary-orange));
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-brown);
+            color: white;
+            padding: 50px 0 30px;
+        }
+
+        .footer-section h5 {
+            color: var(--primary-orange);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-orange);
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-orange);
+        }
+
+        .social-icons a {
+            color: #ccc;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-orange);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .service-card {
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .cuisine-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .navbar-brand img {
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .btn-primary-custom,
+            .btn-outline-custom {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .navbar-brand img {
+                height: 45px;
+            }
+
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="images/folamid logo.png" alt="Folamid Logo">
+            </a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="folamid_vocational_school.html">Vocational School</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <div class="cuisine-highlight">🍲 Nigerian & Intercontinental Cuisine 🌍</div>
+                        <h1 class="hero-title">Celebrating African Flavors with Global Excellence</h1>
+                        <p class="hero-subtitle">From authentic Jollof rice and Egusi to international delicacies, we
+                            bring the best of Nigerian hospitality and world-class cuisine to every dish and
+                            celebration.</p>
+                        <div class="hero-buttons">
+                            <a class="btn btn-primary-custom" href="services.html">Our Services</a>
+                            <a class="btn btn-outline-custom" href="folamid_vocational_school.html">Join Our School</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Premium Services</h2>
+            <p class="section-subtitle">Discover our comprehensive range of Nigerian and international culinary services
+                designed to celebrate culture while exceeding your expectations.</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-utensils service-icon"></i>
+                        <h4>Nigerian & International Catering</h4>
+                        <p>Authentic Nigerian dishes like Jollof, Suya, Pounded Yam with Egusi, alongside international
+                            cuisine for weddings, corporate events, and special occasions throughout Nigeria and beyond.
+                        </p>
+                        <a class="btn-learn-more" href="services.html">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-calendar-alt service-icon"></i>
+                        <h4>Afrocentric Event Management</h4>
+                        <p>Complete event planning celebrating African culture and traditions. From traditional Nigerian
+                            weddings to modern corporate events with cultural elements.</p>
+                        <a class="btn-learn-more" href="services.html">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-graduation-cap service-icon"></i>
+                        <h4>Culinary Education & Training</h4>
+                        <p>Professional culinary training programs focusing on Nigerian cuisine mastery and
+                            international cooking techniques. Build your career in the thriving food industry.</p>
+                        <a class="btn-learn-more" href="services.html">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <img alt="Professional chefs preparing Nigerian dishes in modern kitchen" class="about-image"
+                        src="images/WhatsApp Image 2025-08-13 at 16.14.39_1b8f0d80.jpg" />
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title text-start">Culinary Excellence, Global Impact</h2>
+                    <p class="mb-4">For over a decade, Folamid Catering and Event Planning Limited has been
+                        celebrating Nigeria's rich culinary heritage while embracing international flavors. We're
+                        passionate about showcasing the diversity and excellence of African cuisine to the world.</p>
+                    <p class="mb-4">From Lagos to London, our team has catered events that honor Nigerian traditions
+                        while incorporating global culinary trends. Our vocational school continues to train the next
+                        generation of African chefs and hospitality professionals.</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="stats-card">
+                                <span class="stats-number">800+</span>
+                                <span class="stats-label">Events Celebrated</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stats-card">
+                                <span class="stats-number">500+</span>
+                                <span class="stats-label">Chefs Trained</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="stats-card">
+                                <span class="stats-number">15+</span>
+                                <span class="stats-label">Years Excellence</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stats-card">
+                                <span class="stats-number">25+</span>
+                                <span class="stats-label">Nigerian Dishes Mastered</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuisine Specialties Section -->
+    <section class="cuisine-section">
+        <div class="container">
+            <h2 class="section-title">Our Culinary Specialties</h2>
+            <p class="section-subtitle">Authentic Nigerian flavors meet international excellence in our carefully
+                crafted menu offerings</p>
+            <div class="cuisine-grid">
+                <div class="cuisine-card">
+                    <i class="fas fa-award cuisine-icon-professional"
+                        style="font-size: 3rem; color: var(--primary-orange); margin-bottom: 1.5rem;"></i>
+                    <h4>African Classics</h4>
+                    <ul class="cuisine-list">
+                        <li>Jollof Rice (Party & Native Style)</li>
+                        <li>Pounded Yam with Egusi</li>
+                        <li>Suya & Asun</li>
+                        <li>Pepper Soup Varieties</li>
+                        <li>Nigerian Fried Rice</li>
+                        <li>Moin Moin & Akara</li>
+                    </ul>
+                </div>
+                <div class="cuisine-card">
+                    <i class="fas fa-globe cuisine-icon-professional"
+                        style="font-size: 3rem; color: var(--primary-orange); margin-bottom: 1.5rem;"></i>
+                    <h4>International Fusion</h4>
+                    <ul class="cuisine-list">
+                        <li>Continental Breakfast</li>
+                        <li>Mediterranean Dishes</li>
+                        <li>Asian-Nigerian Fusion</li>
+                        <li>European Fine Dining</li>
+                        <li>American Classics</li>
+                        <li>Middle Eastern Delicacies</li>
+                    </ul>
+                </div>
+                <div class="cuisine-card">
+                    <i class="fas fa-star cuisine-icon-professional"
+                        style="font-size: 3rem; color: var(--primary-orange); margin-bottom: 1.5rem;"></i>
+                    <h4>Special Occasions</h4>
+                    <ul class="cuisine-list">
+                        <li>Traditional Wedding Menus</li>
+                        <li>Corporate Event Catering</li>
+                        <li>Birthday Party Packages</li>
+                        <li>Festival Celebrations</li>
+                        <li>Cultural Event Specials</li>
+                        <li>Custom Menu Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Taste Excellence?</h2>
+            <p class="cta-subtitle">Whether you're planning a traditional Nigerian wedding, corporate event, or want to
+                master African cuisine, we're here to exceed your expectations.</p>
+            <div class="cta-buttons">
+                <a class="btn btn-outline-custom" href="contact.html">Get Quote</a>
+                <a class="btn btn-primary-custom" href="folamid_vocational_school.html">Start Learning</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-section">
+                    <h5>Folamid Catering &amp; Event Planning LTD</h5>
+                    <p>Nigeria's leading provider of authentic Nigerian cuisine and international catering services.
+                        Celebrating African flavors with global excellence in every dish and every event.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#vocational-school">Culinary School</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h5>Our Specialties</h5>
+                    <ul>
+                        <li><a href="services.html">Nigerian Cuisine</a></li>
+                        <li><a href="services.html">International Dishes</a></li>
+                        <li><a href="services.html">Cultural Events</a></li>
+                        <li><a href="services.html">Corporate Catering</a></li>
+                        <li><a href="services.html">Traditional Weddings</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
+                        <li><i class="fas fa-phone"></i> +234 (0) 800-FOLAMID</li>
+                        <li><i class="fas fa-envelope"></i> info@folamid.com.ng</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 8AM-8PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Folamid Catering and Event Planning Limited. Proudly Nigerian. 🇳🇬</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight - 20;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar Background Change on Scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 25px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Add active class to current navigation item
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentLocation = location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all service cards and cuisine cards
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.service-card, .cuisine-card, .stats-card');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
